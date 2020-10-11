@@ -244,16 +244,12 @@ class _homeState extends State<home> {
               ),
 
               Container(
-
-
                 margin: EdgeInsets.all(30),
                 padding: EdgeInsets.all(1000),
-
                 height: 207,
                 width: 450,
                 decoration: new BoxDecoration(
                     color: Colors.white60,
-
                     border: Border.all(
                         color: Colors.black, // set border color
                         width: 3.0), // set border width
@@ -262,10 +258,45 @@ class _homeState extends State<home> {
                     boxShadow: [
                       BoxShadow(blurRadius: 20,
                           color: Colors.white30,
-                          offset: Offset(1, 8))
-                    ]
+                          offset: Offset(1, 8))],
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.all(0),
+                padding: EdgeInsets.all(0),
+                height: 83,
+                width: 180,
+                alignment: Alignment.center,
 
-                ),),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Card(
+                      color: Colors.white,
+                      shape: RoundedRectangleBorder(
+                        side: BorderSide(color: Colors.black, width: 2.0),
+                        borderRadius: BorderRadius.circular(0.0),
+                      ),
+                      child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: <Widget>[
+                            Padding(
+                                padding: const EdgeInsets.all(3.0),
+                                child: FlatButton.icon(
+                                  icon: Icon(Icons.view_compact_outlined),
+                                  label: Text(
+                                    "calendar",
+                                    style: TextStyle(fontSize: 15),
+                                  ),
+                                  onPressed: () => launch(""),
+                                )
+                            ),
+                          ]
+                      ),
+                    ),
+                  ],
+                ),
+              ),
 
               Container(
                 margin: EdgeInsets.all(10),
